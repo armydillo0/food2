@@ -1,37 +1,21 @@
-package meal;
+package meal2;
 
-import java.util.Random;
-
-public class Onion extends Food{//??
-
-    private Calorie cal;
-    private int weight;
-    private static Random ranGen = new Random();
+public class Onion extends Food {
 	
-	public Onion () {
-		this.weight = 110 + ranGen.nextInt(40);
-		Calorie oniCal = new Calorie((int)(this.weight*0.4));
-		this.cal = oniCal;
-	}
-	
-	public int getCal() {
-		return this.cal.getValue();
-	}
-	
-	public int getWeight() {
-		return this.weight;
-	}
-	
-	public void getRoasted() {
-		this.cal.setValue(this.cal.getValue()+56);
-	}
-	
-	public void getFried() {
-		this.cal.setValue(this.cal.getValue()*2);
-	}
-	
-	public String toString() {
-		return "// Onion - " + this.cal.getValue() + " calories & " +this.getWeight()+" grams" ;
-	}
-
+  public Onion () {
+    this.weight = 110 + ranGen.nextInt(40);
+    this.calories = (int)(this.weight*0.4);
+  }
+  
+  public void getRoasted() {
+	  this.calories = this.calories + 56;
+  }
+  
+  public void getFried() {
+	  this.calories = this.calories*2;
+  }
+  
+  public String toString() {
+    return "// Onion - " + this.calories + " calories & " +this.weight+" grams" ;
+  }
 }
