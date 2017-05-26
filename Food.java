@@ -15,7 +15,5 @@ public abstract class Food {
 	  public int getWeight() {
 		    return this.weight;
 		  }
-	  
-	  public abstract String toString();
 
 }
