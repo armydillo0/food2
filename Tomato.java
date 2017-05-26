@@ -1,33 +1,18 @@
-package meal;
+package meal2;
 
-import java.util.Random;
-
-public class Tomato extends Food{//?
-
-	private Calorie cal;
-	private int weight;
-	private static Random ranGen = new Random();
-	
-	public Tomato () {
-		this.weight = 123 + ranGen.nextInt(59);
-		Calorie tomCal = new Calorie((int)(this.weight*0.18));
-		this.cal = tomCal;
-	}
-	
-	public int getCal() {
-		return this.cal.getValue();
-	}
-	
-	public int getWeight() {
-		return this.weight;
-	}
-	
-	public void makeSauce() {
-		this.cal.setValue(this.cal.getValue()+50);
-	}
-	
-	public String toString() {
-		return "// Tomato - " + this.cal.getValue() + " calories & " +this.getWeight()+" grams" ;
-	}
-	
+public class Tomato extends Food {
+  
+  public Tomato () {
+    this.weight = 123 + ranGen.nextInt(59);
+    this.calories = (int)(this.weight*0.18);
+  }
+  
+  public void makeSauce() {
+	  this.calories +=50;
+  }
+  
+  public String toString() {
+    return "// Tomato - " + this.calories + " calories & " +this.weight+" grams" ;
+  }
+  
 }
