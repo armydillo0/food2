@@ -67,7 +67,8 @@ public class Blender {
     			car.getSalted();
     		}foodList.add(car);
     	}
-    }scan.close();
+    }else System.out.println("come on now");
+    scan.close();
     
     System.out.println();
     System.out.println("LIST of INGREDIENTS:");
